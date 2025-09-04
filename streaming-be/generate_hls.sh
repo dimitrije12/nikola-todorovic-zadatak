@@ -93,7 +93,7 @@ echo "Metadata sacuvan u $METADATA_FILE"
 content=$(cat "$SHARED_METADATA_FILE")
 
 # Na sadrzaj dodajemo dodatne JSON informacije o novom videu
-if [ "$content" = "[]" ]; then
+if [ "$content" = "[]" ] || [ -z "$content" ]; then
   echo "[{\"title\":\"$VIDEO_TITLE\",\"index\":$INDEX,\"streaming_url\":\"$STREAMING_URL\"}]" > "$SHARED_METADATA_FILE"
 else
   new_content="${content%]} ,{\"title\":\"$VIDEO_TITLE\",\"index\":$INDEX,\"streaming_url\":\"$STREAMING_URL\"}]"
