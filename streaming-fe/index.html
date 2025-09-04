@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nikola Todorovic - video streaming</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Nikola Todorovic - video streaming</h1>
+
+		<div id="video-list"></div>
+
+		<div id="player-section" style="display: none">
+			<h2 id="video-title"></h2>
+			<div id="video-nav-buttons" style="margin: 10px 0"></div>
+
+			<!-- Dugme za prikaz/sakrivanje metapodataka -->
+			<div id="video-metadata-toggle">
+				<button id="toggle-metadata-btn">Prikaži detalje</button>
+			</div>
+
+			<!-- Metapodaci -->
+			<div id="video-metadata"></div>
+
+			<!-- Video ili YouTube iframe -->
+			<div id="video-player-container"></div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+		<script src="config.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: #111;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	background: #1a1a1a;
+	color: #00bfff;
+	margin: 0;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+#video-list {
+	margin: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 1.5rem;
+}
+
+.video-item {
+	background: #222;
+	padding: 1rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	transition: transform 0.2s ease, background 0.2s;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+}
+
+	.video-item:hover {
+		background: #333;
+		transform: scale(1.03);
+	}
+
+#player-section {
+	margin: 2rem;
+	background: #1a1a1a;
+	padding: 2rem;
+	border-radius: 12px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+#video-title {
+	margin-top: 0;
+	color: #00bfff;
+	font-size: 1.5rem;
+}
+
+#video-player-container {
+	margin-top: 1.5rem;
+	display: flex;
+	justify-content: center;
+}
+
+video, iframe {
+	border-radius: 8px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+#video-metadata {
+	margin-top: 2rem;
+	background: #2a2a2a;
+	padding: 1rem;
+	border-radius: 8px;
+	display: none; /* Sakriveno dok se ne klikne video */
+}
+
+.metadata-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+	.metadata-list li {
+		margin-bottom: 0.5rem;
+	}
+
+#video-nav-buttons {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+	#video-nav-buttons button {
+		background: #00bfff;
+		border: none;
+		color: #fff;
+		padding: 0.6rem 1.2rem;
+		margin: 0 0.5rem;
+		border-radius: 6px;
+		cursor: pointer;
+		transition: background 0.2s;
+		font-size: 1rem;
+	}
+
+		#video-nav-buttons button:disabled {
+			background: #444;
+			cursor: not-allowed;
+		}
+
+		#video-nav-buttons button:hover:not(:disabled) {
+			background: #0099cc;
+		}
+#video-metadata-toggle {
+	text-align: right;
+	margin-top: 1rem;
+}
+
+#toggle-metadata-btn {
+	background: transparent;
+	border: 1px solid #00bfff;
+	color: #00bfff;
+	padding: 0.4rem 1rem;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: all 0.2s ease-in-out;
+}
+
+	#toggle-metadata-btn:hover {
+		background: #00bfff;
+		color: #111;
+	}
